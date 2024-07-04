@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top.100.Liked", "Top.100.Liked\Top.100.Liked.csproj", "{8A619416-3F48-41DB-9899-0AD54DE3AACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Top.100.Liked", "Top.100.Liked\Top.100.Liked.csproj", "{8A619416-3F48-41DB-9899-0AD54DE3AACA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{ACF1FD0F-D722-4392-A9DF-DA9BC53B3F25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BEF5C9A-8165-4713-88B8-A3F5E7D6EA8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top.100.Liked.Test", "Top.100.Liked.Test\Top.100.Liked.Test.csproj", "{D4348E44-9553-470A-9851-332D63DF9A50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Top.100.Liked.Test", "Top.100.Liked.Test\Top.100.Liked.Test.csproj", "{D4348E44-9553-470A-9851-332D63DF9A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{3E40EF4A-3332-4260-A12F-8EC4644BBDE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Test", "Algorithm.Test\Algorithm.Test.csproj", "{F1F46077-EDA6-4343-85E2-7CFC41327C68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printer", "Printer\Printer.csproj", "{08FBEA17-D524-48B5-80D1-6FC6251C58F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,18 @@ Global
 		{D4348E44-9553-470A-9851-332D63DF9A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4348E44-9553-470A-9851-332D63DF9A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4348E44-9553-470A-9851-332D63DF9A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E40EF4A-3332-4260-A12F-8EC4644BBDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E40EF4A-3332-4260-A12F-8EC4644BBDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E40EF4A-3332-4260-A12F-8EC4644BBDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E40EF4A-3332-4260-A12F-8EC4644BBDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F46077-EDA6-4343-85E2-7CFC41327C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F46077-EDA6-4343-85E2-7CFC41327C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F46077-EDA6-4343-85E2-7CFC41327C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F46077-EDA6-4343-85E2-7CFC41327C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08FBEA17-D524-48B5-80D1-6FC6251C58F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FBEA17-D524-48B5-80D1-6FC6251C58F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FBEA17-D524-48B5-80D1-6FC6251C58F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08FBEA17-D524-48B5-80D1-6FC6251C58F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8A619416-3F48-41DB-9899-0AD54DE3AACA} = {ACF1FD0F-D722-4392-A9DF-DA9BC53B3F25}
 		{D4348E44-9553-470A-9851-332D63DF9A50} = {3BEF5C9A-8165-4713-88B8-A3F5E7D6EA8C}
+		{3E40EF4A-3332-4260-A12F-8EC4644BBDE7} = {ACF1FD0F-D722-4392-A9DF-DA9BC53B3F25}
+		{F1F46077-EDA6-4343-85E2-7CFC41327C68} = {3BEF5C9A-8165-4713-88B8-A3F5E7D6EA8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B424C03-8700-40AB-BDB5-BE0811EE24CB}
