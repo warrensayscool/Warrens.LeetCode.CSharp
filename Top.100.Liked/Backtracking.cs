@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Top._100.Liked
 {
@@ -27,12 +29,12 @@ namespace Top._100.Liked
 
             var result = new List<string>();
 
-            Backtrack(digits, phoneMap, 0, [], result);
+            LetterCombinationsBacktrack(digits, phoneMap, 0, [], result);
 
             return result;
         }
 
-        private void Backtrack(string digits, Dictionary<char, string> phoneMap, int index, List<char> currentCombination, IList<string> result)
+        private void LetterCombinationsBacktrack(string digits, Dictionary<char, string> phoneMap, int index, List<char> currentCombination, IList<string> result)
         {
             if (index == digits.Length)
             {
@@ -44,8 +46,93 @@ namespace Top._100.Liked
             foreach (var letter in possibleLetters)
             {
                 currentCombination.Add(letter);
-                Backtrack(digits, phoneMap, index + 1, currentCombination, result);
+                LetterCombinationsBacktrack(digits, phoneMap, index + 1, currentCombination, result);
                 currentCombination.RemoveAt(currentCombination.Count - 1);
+            }
+        }
+
+        /// <summary>
+        /// https://leetcode.com/problems/generate-parentheses/description/?envType=study-plan-v2&envId=top-100-liked
+        /// 22. Generate Parentheses
+        /// </summary>
+        /// <param name="n">1 <= n <= 8</param>
+        /// <returns></returns>
+        public IList<string> GenerateParenthesis(int n)
+        {
+            var result = new List<string>();
+            char[] Parenthesis = ['(', ')'];
+            string combination = "(";
+
+            GenerateParenthesisBacktracking(n, Parenthesis, combination, 1, result);
+
+            return result;
+        }
+
+        private bool GenerateParenthesisBacktracking(int n, char[] parenthesis, string combination, int openParenthesis, List<string> result)
+        {
+            if (combination.Length == n * 2)
+            {
+                if (openParenthesis == 0)
+                {
+                    result.Add(combination);
+                }
+                return openParenthesis == 0;
+            }
+
+            foreach (char c in parenthesis)
+            {
+                var newOpenParenthesis = openParenthesis;
+                if (c == '(')
+                {
+                    newOpenParenthesis++;
+                }
+                else
+                {
+                    newOpenParenthesis--;
+                }
+
+                if (newOpenParenthesis >= 0 && newOpenParenthesis <= n)
+                {
+                    GenerateParenthesisBacktracking(n, parenthesis, combination + c, newOpenParenthesis, result);
+                }
+            }
+            return false;
+        }
+
+
+        /// <summary>
+        /// https://leetcode.com/problems/combination-sum/description/?envType=study-plan-v2&envId=top-100-liked
+        /// 39. Combination Sum
+        /// </summary>
+        /// <param name="candidates"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public IList<IList<int>> CombinationSum(int[] candidates, int target)
+        {
+            IList<IList<int>> result = new List<IList<int>>();
+            Array.Sort(candidates);
+            CombinationSumBacktracking(candidates, target, result, [], 0);
+
+            return result;
+
+        }
+
+        private void CombinationSumBacktracking(int[] candidates, int target, IList<IList<int>> result, List<int> combination, int start)
+        {
+            if (combination.Sum() >= target)
+            {
+                if (combination.Sum() == target)
+                {
+                    result.Add(new List<int>(combination));
+                }
+                return;
+            }
+
+            for (int i = start; i < candidates.Length; i++)
+            {
+                combination.Add(candidates[i]);
+                CombinationSumBacktracking(candidates, target, result, combination, i);
+                combination.RemoveAt(combination.Count - 1);
             }
         }
     }

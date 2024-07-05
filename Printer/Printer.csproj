@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Algorithm\Algorithm.csproj" />
+    <ProjectReference Include="..\Top.100.Liked\Top.100.Liked.csproj" />
   </ItemGroup>
 
 </Project>
