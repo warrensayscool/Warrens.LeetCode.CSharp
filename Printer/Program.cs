@@ -6,7 +6,7 @@
         {
             Algorithm.Backtracking backtracking = new Algorithm.Backtracking();
 
-            backtracking.KnightsTour(7);
+            backtracking.KnightsTourBacktracking(7);
         }
     }
 }

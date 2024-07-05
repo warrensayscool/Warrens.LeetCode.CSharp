@@ -13,7 +13,7 @@ namespace Algorithm.Test
         public void TestKnightsTour_With_Input_1(int input)
         {
             var expected = new int[,] { { 1 } };
-            var result = _backtracking.KnightsTour(input);
+            var result = _backtracking.KnightsTourBacktracking(input);
             Assert.Equal(expected, result);
         }
 
@@ -24,7 +24,7 @@ namespace Algorithm.Test
         public void TestKnightsTour_Without_Solution(int input)
         {
             var expected = new int[input, input];
-            var result = _backtracking.KnightsTour(input);
+            var result = _backtracking.KnightsTourBacktracking(input);
             Assert.Equal(expected, result);
         }
 
@@ -41,7 +41,7 @@ namespace Algorithm.Test
                 { 21, 16, 11,  4, 23 }
             };
 
-            var result = _backtracking.KnightsTour(input);
+            var result = _backtracking.KnightsTourBacktracking(input);
             Assert.Equal(expected, result);
         }
 
@@ -59,7 +59,7 @@ namespace Algorithm.Test
                 { 10, 27, 6, 19, 16, 25 }
             };
 
-            var result = _backtracking.KnightsTour(input);
+            var result = _backtracking.KnightsTourBacktracking(input);
             Assert.Equal(expected, result);
         }
 
@@ -78,7 +78,7 @@ namespace Algorithm.Test
                 { 9, 24, 31, 34, 7, 12, 15 }
             };
 
-            var result = _backtracking.KnightsTour(input);
+            var result = _backtracking.KnightsTourBacktracking(input);
             Assert.Equal(expected, result);
         }
     }
