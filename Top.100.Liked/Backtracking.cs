@@ -135,5 +135,46 @@ namespace Top._100.Liked
                 combination.RemoveAt(combination.Count - 1);
             }
         }
+
+
+        /// <summary>
+        /// https://leetcode.com/problems/permutations/?envType=study-plan-v2&envId=top-100-liked
+        /// 46. Permutations
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public IList<IList<int>> Permute(int[] nums)
+        {
+            IList<IList<int>> result = [];
+
+            PermuteBacktracking(result, nums, []);
+
+            return result;
+        }
+
+        private void PermuteBacktracking(IList<IList<int>> result, int[] nums, IList<int> temp)
+        {
+            if (temp.Count == nums.Length)
+            {
+                result.Add(new List<int>(temp));
+                return;
+            }
+
+            if (temp.Count > nums.Length)
+            {
+                return;
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (temp.Contains(nums[i]))
+                {
+                    continue;
+                }
+                temp.Add(nums[i]);
+                PermuteBacktracking(result, nums, temp);
+                temp.RemoveAt(temp.Count - 1);
+            }
+        }
     }
 }

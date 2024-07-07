@@ -8,8 +8,7 @@ namespace Printer
             Algorithm.Backtracking backtracking = new();
             Top._100.Liked.Backtracking top100LikedBacktracking = new();
 
-
-            var result = top100LikedBacktracking.CombinationSum([2, 3, 6, 7], 7);
+            var result = top100LikedBacktracking.Permute([2, 3, 6, 7]);
 
             PrintStringListList(result);
         }
